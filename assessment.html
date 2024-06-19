@@ -231,6 +231,28 @@
     </script>
 
     <style>
+      @media only screen and (max-width:81.25em) { 
+        .legend_container {
+           left: 0;
+        }
+      }
+      
+      @media only screen and (max-width:48.125em) { 
+      	.legend_container {
+          left: 0;
+          display: flex;
+          top: 47rem;
+          gap: 1rem;
+          margin-bottom: 2rem;
+        }
+      }
+
+      @media only screen and (max-width:31.25em) { 
+        .legend_row {
+            grid-column-gap: .25rem;
+        }
+      }
+      
       #assessment fieldset:not(:first-child) {
         display: none;
       }
@@ -989,8 +1011,8 @@
 
       <div class="_form_1"></div><script src="https://backstorybranding38046.activehosted.com/f/embed.php?id=1" type="text/javascript" charset="utf-8"></script>
         
-      <div id="showAfterSub" class="row balign results">
-        <div class="legend_container">
+      <div id="showAfterSub" class="row balign results" style="position: relative;">
+        <div class="legend_container" style="position: absolute; left: -15rem; top: 45rem;";>
                   <div class="legend_row">
                     <div class="legend_dot blue"></div>
                     <div class="text-size-regular">Defined</div>
