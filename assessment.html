@@ -29,6 +29,10 @@
 
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
+
+          $("#zion").scrollIntoView({ behavior: "smooth" });
+          console.log('Clicked next button');
+          
           $("#mainImage").hide();
             
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
@@ -44,7 +48,6 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
-          $("#zion").scrollIntoView({ behavior: "smooth" });
         });
 
         $(".subBtn").on("click", function (e) {
