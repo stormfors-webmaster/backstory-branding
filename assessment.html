@@ -13,7 +13,7 @@
       function showWheel() {
         $(".questions, .stepIndicators").hide();
         $(".results").fadeIn();
-        $("#zion").scrollIntoView({ behavior: "smooth" });
+        $("#zion").scrollIntoView();
       }
 
       $(function () {
@@ -29,13 +29,15 @@
 
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
+          
           console.log('Just clicked Next. Will now run the function');
           $("#mainImage").hide();
+          
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
           $(this)
             .parents("fieldset")
             .fadeOut(function () {
-              $(nextFieldset).slideDown();
+              $("#zion").scrollIntoView();
               $(".crumb").removeClass("active");
               $(".crumb")
                 .eq($("#assessment fieldset:visible").index())
