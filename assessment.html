@@ -30,6 +30,8 @@
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
           $("#mainImage").hide();
+          $("#faqsectionid").hide();
+          $("#footerid").hide();
           
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
           $(this)
@@ -45,6 +47,8 @@
                 .text($(".crumb.active").text());
             });
           $("#zion")[0].scrollIntoView({ behavior: "smooth" });
+          $("#faqsectionid").show();
+          $("#footerid").show();
         });
 
         $(".subBtn").on("click", function (e) {
