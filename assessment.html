@@ -28,10 +28,10 @@
         }
 
         $(".nxtBtn").on("click", function (e) {
-          $("#zion").scrollIntoView({ behavior: "smooth" });
-
           e.preventDefault();
           $("#mainImage").hide();
+          $("#zion").scrollIntoView({ behavior: "smooth" });
+          
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
           $(this)
             .parents("fieldset")
@@ -177,10 +177,9 @@
 
 
         $(".prevBtn").on("click", function (e) {
-          // Scroll to top
+          e.preventDefault();
           $("#zion").scrollIntoView({ behavior: "smooth" });
           
-          e.preventDefault();
           var prevFieldset = $(this).parents("fieldset").prev("fieldset");
           console.log("fieldset index = " + $(prevFieldset).index());
           $(this)
