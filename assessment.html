@@ -45,9 +45,8 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
-          //$("#zion")[0].scrollIntoView({ behavior: "smooth" });
-          console.log('Successfully clicked next, and ran the function. Will now try and scoll up - jumping scroll');
-          $("#zion").scrollIntoView();
+          console.log('Successfully clicked next, and ran the function. Will now try and scoll up - smooth scrolling');
+          $("#zion")[0].scrollIntoView({ behavior: "smooth" });
           console.log('Should have scrolled up');
         });
 
