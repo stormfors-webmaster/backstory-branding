@@ -37,7 +37,6 @@
           $(this)
             .parents("fieldset")
             .fadeOut(function () {
-              $("#zion").scrollIntoView();
               $(".crumb").removeClass("active");
               $(".crumb")
                 .eq($("#assessment fieldset:visible").index())
@@ -47,7 +46,9 @@
                 .text($(".crumb.active").text());
             });
           //$("#zion")[0].scrollIntoView({ behavior: "smooth" });
-          console.log('Successfully clicked next, and ran the function');
+          console.log('Successfully clicked next, and ran the function. Will now try and scoll up - jumping scroll');
+          $("#zion").scrollIntoView();
+          console.log('Should have scrolled up');
         });
 
         $(".subBtn").on("click", function (e) {
