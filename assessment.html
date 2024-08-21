@@ -29,8 +29,6 @@
 
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
-          
-          console.log('Just clicked Next. Will now run the function');
           $("#mainImage").hide();
           
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
@@ -46,9 +44,7 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
-          console.log('Successfully clicked next, and slideDown function back, and ran the function. Will now try and scoll up - smooth scrolling');
           $("#zion")[0].scrollIntoView({ behavior: "smooth" });
-          console.log('Should have scrolled up');
         });
 
         $(".subBtn").on("click", function (e) {
@@ -193,6 +189,7 @@
                 .eq($("#assessment fieldset:visible").index())
                 .addClass("active");
             });
+          $("#zion")[0].scrollIntoView({ behavior: "smooth" });
         });
 
         $("#bWheel [id^='shape-']").on("click", function () {
