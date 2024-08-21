@@ -30,8 +30,7 @@
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
           $("#mainImage").hide();
-          $("#zion").scrollIntoView({ behavior: "smooth" });
-          
+            
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
           $(this)
             .parents("fieldset")
@@ -45,6 +44,7 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
+          $("#zion").scrollIntoView({ behavior: "smooth" });
         });
 
         $(".subBtn").on("click", function (e) {
