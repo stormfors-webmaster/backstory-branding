@@ -37,6 +37,7 @@
           $(this)
             .parents("fieldset")
             .fadeOut(function () {
+              $(nextFieldset).slideDown();
               $(".crumb").removeClass("active");
               $(".crumb")
                 .eq($("#assessment fieldset:visible").index())
@@ -45,7 +46,7 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
-          console.log('Successfully clicked next, and ran the function. Will now try and scoll up - smooth scrolling');
+          console.log('Successfully clicked next, and slideDown function back, and ran the function. Will now try and scoll up - smooth scrolling');
           $("#zion")[0].scrollIntoView({ behavior: "smooth" });
           console.log('Should have scrolled up');
         });
