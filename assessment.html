@@ -29,10 +29,6 @@
 
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
-
-          $("#zion").scrollIntoView({ behavior: "smooth" });
-          console.log('Clicked next button');
-          
           $("#mainImage").hide();
             
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
@@ -48,6 +44,7 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
+            $("#zion").scrollIntoView({ behavior: "smooth" });
         });
 
         $(".subBtn").on("click", function (e) {
@@ -169,19 +166,9 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
+        
         $(".prevBtn").on("click", function (e) {
           e.preventDefault();
-          $("#zion").scrollIntoView({ behavior: "smooth" });
           
           var prevFieldset = $(this).parents("fieldset").prev("fieldset");
           console.log("fieldset index = " + $(prevFieldset).index());
@@ -194,6 +181,7 @@
                 .eq($("#assessment fieldset:visible").index())
                 .addClass("active");
             });
+            $("#zion").scrollIntoView({ behavior: "smooth" });
         });
 
         $("#bWheel [id^='shape-']").on("click", function () {
