@@ -32,7 +32,7 @@
           $("#mainImage").hide();
           $("#faqsectionid").hide();
           $("#footerid").hide();
-          console.log('Next');
+          console.log('Next - 2000');
           
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
           $(this)
@@ -48,8 +48,8 @@
                 .text($(".crumb.active").text());
             });
           $("#zion")[0].scrollIntoView({ behavior: "smooth" });
-          $("#faqsectionid").show();
-          $("#footerid").show();
+          $("#faqsectionid").show(2000);
+          $("#footerid").show(2000);
         });
 
         $(".subBtn").on("click", function (e) {
