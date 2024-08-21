@@ -29,6 +29,7 @@
 
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
+          console.log('Just clicked Next. Will now run the function');
           $("#mainImage").hide();
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
           $(this)
@@ -44,7 +45,7 @@
                 .text($(".crumb.active").text());
             });
           //$("#zion")[0].scrollIntoView({ behavior: "smooth" });
-          console.log('Clicked Next');
+          console.log('Successfully clicked next, and ran the function');
         });
 
         $(".subBtn").on("click", function (e) {
