@@ -30,13 +30,8 @@
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
           $("#mainImage").hide();
-          
-          //$("#faqsectionid").css("opacity", "0");
-          //$("#footerid").css("opacity", "0");
-
-          $("#faqsectionid").hide();
-          $("#footerid").hide();
-          
+          $("#faqsectionid").css("opacity", "0");
+          $("#footerid").css("opacity", "0");
           var startHeight = $("#start").outerHeight();
           $("#footerid").css("height", startHeight);
           
@@ -57,17 +52,14 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
-          
-          $("#faqsectionid").fadeIn();
-          $("#footerid").fadeIn();
-          
-          //const glitchTimeout = setTimeout(glitchTimeoutFunction, 100);
-          //function glitchTimeoutFunction() {
-          //    $("#faqsectionid").css("opacity", "100");
-          //    $("#footerid").css("opacity", "100");
-          //}
-          
-          console.log('FAQ and Footer ID, Hide and then FadeIn');
+
+          const glitchTimeout = setTimeout(glitchTimeoutFunction, 100);
+          function glitchTimeoutFunction() {
+              $("#faqsectionid").css("opacity", "100");
+              $("#footerid").css("opacity", "100");
+          }
+
+          console.log('FAQ and Footer ID shown after 100 ms Timeout, and opacity 100%');
         });
 
         $(".subBtn").on("click", function (e) {
