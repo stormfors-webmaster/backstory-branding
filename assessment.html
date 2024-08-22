@@ -29,13 +29,16 @@
 
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
-          $("#mainImage").css("opacity", "0");
+          $("#mainImage").hide();
           $("#faqsectionid").css("opacity", "0");
-          $("#footerid").hide();
+          $("#footerid").css("opacity", "0");
+          var startHeight = $("#start").outerHeight();
+          $("#footerid").css("height", startHeight);
           
-          console.log('Next - opacity');
+          console.log('Next - opacity, startHeight: ' + startHeight);
           
-          $("#assessment-heading")[0].scrollIntoView();
+          $("#start")[0].scrollIntoView({behavior: "smooth"});
+          
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
           $(this)
             .parents("fieldset")
@@ -49,9 +52,11 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
+          
           //$("#assessment-heading")[0].scrollIntoView();
           //$("#faqsectionid").show(2000);
           //$("#footerid").show(2000);
+          
           console.log('Scroll early, before the task');
         });
 
