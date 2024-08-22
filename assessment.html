@@ -52,12 +52,11 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
+
+          $("#faqsectionid").delay(2000).css("opacity", "100");
+          $("#footerid").delay(2000).css("opacity", "100");
           
-          //$("#assessment-heading")[0].scrollIntoView();
-          //$("#faqsectionid").show(2000);
-          //$("#footerid").show(2000);
-          
-          console.log('Scroll early, before the task');
+          console.log('FAQ and Footer ID shown after 2000 ms, and opacity 100%');
         });
 
         $(".subBtn").on("click", function (e) {
