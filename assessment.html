@@ -30,9 +30,13 @@
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
           $("#mainImage").hide();
+
+          // Hide FAQ section and footer, to make sure they don't appeare while the new
+          // questions are loding in after clicking the Next button (that looked like a glitch) 
           $("#faqsectionid").css("opacity", "0");
           $("#footerid").css("opacity", "0");
-                    
+
+          // Scroll up to #start, because it looks better, and not less glitchy after clicking the next button
           $("#start")[0].scrollIntoView({behavior: "smooth"});
           
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
@@ -49,6 +53,8 @@
                 .text($(".crumb.active").text());
             });
 
+          // Show the FAQ section and footer after clicking the next button,
+          // after 1000 ms delay, so that they are not shown too early
           const glitchTimeout = setTimeout(glitchTimeoutFunction, 1000);
           function glitchTimeoutFunction() {
               $("#faqsectionid").css("opacity", "100");
@@ -181,8 +187,12 @@
           var prevFieldset = $(this).parents("fieldset").prev("fieldset");
           console.log("fieldset index = " + $(prevFieldset).index());
 
+          // Hide FAQ section and footer, to make sure they don't appeare while the new
+          // questions are loding in after clicking the previous button (that looked like a glitch) 
           $("#faqsectionid").css("opacity", "0");
           $("#footerid").css("opacity", "0");
+
+          // Scroll up to #start, because it looks better, and not less glitchy after clicking the previous button
           $("#start")[0].scrollIntoView({behavior: "smooth"});
           
           $(this)
@@ -194,7 +204,9 @@
                 .eq($("#assessment fieldset:visible").index())
                 .addClass("active");
             });
-          
+
+          // Show the FAQ section and footer after clicking the next button,
+          // after 1000 ms delay, so that they are not shown too early
           const glitchTimeout = setTimeout(glitchTimeoutFunction, 1000);
           function glitchTimeoutFunction() {
               $("#faqsectionid").css("opacity", "100");
