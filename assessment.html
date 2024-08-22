@@ -53,10 +53,13 @@
                 .text($(".crumb.active").text());
             });
 
-          $("#faqsectionid").delay(5000).css("opacity", "100");
-          $("#footerid").delay(5000).css("opacity", "100");
+          const glitchTimeout = setTimeout(glitchTimeoutFunction, 5000);
+          function glitchTimeoutFunction() {
+              $("#faqsectionid").css("opacity", "100");
+              $("#footerid").css("opacity", "100");
+          }
           
-          console.log('FAQ and Footer ID shown after 2000 ms, and opacity 100%');
+          console.log('FAQ and Footer ID shown after 5000 ms Timeout, and opacity 100%');
         });
 
         $(".subBtn").on("click", function (e) {
