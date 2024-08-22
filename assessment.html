@@ -29,11 +29,13 @@
 
         $(".nxtBtn").on("click", function (e) {
           e.preventDefault();
-          $("#mainImage").hide();
-          $("#faqsectionid").hide();
+          $("#mainImage").css("opacity", "0");
+          $("#faqsectionid").css("opacity", "0");
           $("#footerid").hide();
-          console.log('Next - 2000');
           
+          console.log('Next - opacity');
+          
+          $("#assessment-heading")[0].scrollIntoView();
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
           $(this)
             .parents("fieldset")
@@ -47,10 +49,10 @@
                 .siblings("h2")
                 .text($(".crumb.active").text());
             });
-          $("#assessment-heading")[0].scrollIntoView();
+          //$("#assessment-heading")[0].scrollIntoView();
           //$("#faqsectionid").show(2000);
           //$("#footerid").show(2000);
-          console.log('Next is now hidden, scroll to #assessment-heading');
+          console.log('Scroll early, before the task');
         });
 
         $(".subBtn").on("click", function (e) {
