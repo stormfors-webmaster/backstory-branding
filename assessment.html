@@ -34,8 +34,8 @@
           //$("#faqsectionid").css("opacity", "0");
           //$("#footerid").css("opacity", "0");
 
-          $("#faqsectionid").fadeOut();
-          $("#footerid").fadeOut();
+          $("#faqsectionid").hide();
+          $("#footerid").hide();
           
           var startHeight = $("#start").outerHeight();
           $("#footerid").css("height", startHeight);
@@ -67,7 +67,7 @@
           //    $("#footerid").css("opacity", "100");
           //}
           
-          console.log('FAQ and Footer ID shown after 1000 ms FadeOut and FadeIn);
+          console.log('FAQ and Footer ID, Hide and then FadeIn');
         });
 
         $(".subBtn").on("click", function (e) {
