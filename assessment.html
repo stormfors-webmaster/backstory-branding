@@ -32,11 +32,7 @@
           $("#mainImage").hide();
           $("#faqsectionid").css("opacity", "0");
           $("#footerid").css("opacity", "0");
-          var startHeight = $("#start").outerHeight();
-          $("#footerid").css("height", startHeight);
-          
-          console.log('Next - opacity, startHeight: ' + startHeight);
-          
+                    
           $("#start")[0].scrollIntoView({behavior: "smooth"});
           
           var nextFieldset = $(this).parents("fieldset").next("fieldset");
@@ -59,7 +55,6 @@
               $("#footerid").css("opacity", "100");
           }
 
-          console.log('Next: FAQ and Footer ID shown after 1000 ms Timeout, and opacity 100%');
         });
 
         $(".subBtn").on("click", function (e) {
@@ -206,7 +201,6 @@
               $("#footerid").css("opacity", "100");
           }
 
-          console.log('Previous: FAQ and Footer ID shown after 1000 ms Timeout, and opacity 100%');
         });
 
         $("#bWheel [id^='shape-']").on("click", function () {
