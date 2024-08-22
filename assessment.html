@@ -59,7 +59,7 @@
               $("#footerid").css("opacity", "100");
           }
 
-          console.log('FAQ and Footer ID shown after 1000 ms Timeout, and opacity 100%');
+          console.log('Next: FAQ and Footer ID shown after 1000 ms Timeout, and opacity 100%');
         });
 
         $(".subBtn").on("click", function (e) {
@@ -181,20 +181,15 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
         $(".prevBtn").on("click", function (e) {
           e.preventDefault();
           var prevFieldset = $(this).parents("fieldset").prev("fieldset");
           console.log("fieldset index = " + $(prevFieldset).index());
+
+          $("#faqsectionid").css("opacity", "0");
+          $("#footerid").css("opacity", "0");
+          $("#start")[0].scrollIntoView({behavior: "smooth"});
+          
           $(this)
             .parents("fieldset")
             .fadeOut(function () {
@@ -204,7 +199,14 @@
                 .eq($("#assessment fieldset:visible").index())
                 .addClass("active");
             });
-          $("#zion")[0].scrollIntoView({ behavior: "smooth" });
+          
+          const glitchTimeout = setTimeout(glitchTimeoutFunction, 1000);
+          function glitchTimeoutFunction() {
+              $("#faqsectionid").css("opacity", "100");
+              $("#footerid").css("opacity", "100");
+          }
+
+          console.log('Previous: FAQ and Footer ID shown after 1000 ms Timeout, and opacity 100%');
         });
 
         $("#bWheel [id^='shape-']").on("click", function () {
