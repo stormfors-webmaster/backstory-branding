@@ -8,7 +8,11 @@
     <script>
       var assessmentAnswers;
       var qs;
-      var queryString = new URLSearchParams(document.location.search);
+      // var queryString = new URLSearchParams(document.location.search);
+
+      const url = document.location;
+      const urlParameters = url.search ? url.search : (url.hash ? url.hash.slice(url.hash.indexOf('?')) : '');
+      const queryString = new URLSearchParams(urlParameters);
 
       function showWheel() {
         $(".questions, .stepIndicators").hide();
