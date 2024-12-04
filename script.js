@@ -129,7 +129,7 @@ $(function () {
 
       assessmentAnswers = $("#assessment").serialize();
       let pageUrl =
-        "https://www.backstorybranding.com/dev/brand-assesment-dev-2?";
+        "https://www.backstorybranding.com/brand-assessment?";
       let encodedPageUrl = encodeURIComponent(pageUrl);
       qs = new URLSearchParams(assessmentAnswers);
       let encodedAnswers = encodeURIComponent(assessmentAnswers);
