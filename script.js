@@ -28,7 +28,7 @@ var Path = document.location.pathname;
 /*-------------------------------------*/
 
 Webflow.push(function () {
-  $.get("svg.html", function (data) {
+  $.get("./svg.html", function (data) {
     $("#ajaxContent").append(data);
     if (window.location.href.includes("?redirect=true")) {
       const storedResults = localStorage.getItem("brandAssessmentResults");
